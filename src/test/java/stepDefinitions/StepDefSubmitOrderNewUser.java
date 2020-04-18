@@ -39,7 +39,7 @@ public class StepDefSubmitOrderNewUser extends Base {
 		
 		CheckOut co = new CheckOut(driver);
 		co.createNewAccount();
-		co.proceedToChkout();
+	//	co.proceedToChkout();
 
 	}
 

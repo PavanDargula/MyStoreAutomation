@@ -8,6 +8,8 @@ import cucumber.api.java.en.Then;
 import pageObjects.SearchProducts;
 import resources.Base;
 import junit.framework.Assert;
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.Assert.assertThat;
 
 @Test
 public class StepDefSearchProds extends Base {
@@ -29,7 +31,8 @@ public class StepDefSearchProds extends Base {
 		
 		String resMessage = SearchProducts.resultsConfirmationMsg();
 		System.out.println(resMessage);
-		Assert.assertTrue(resMessage.contains("  results have been found"));
+		//Assert.assertTrue(resMessage.contains("results have been found"));
+		assertThat(resMessage,containsString("results have been found"));
 		
 	}
 
